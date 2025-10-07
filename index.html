@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Personal Portfolio Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Uma Patel | Portfolio</title>
 </head>
 <body>
+  <div class="fade-in">
     <div class="hero">
-        <nav>
-              
-            <!--
-            <img src="https://drive.google.com/uc?id=1bmqQiELHDLqYEc5Rntb9VUfAi20j1zet" class="logo" alt="My Logo" />
-            -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+        <a href="https://docs.google.com/document/d/1wuIybu2j02CWnAq5KXcbDSzyRvODzq_v/edit" class="btn">Resume</a>
+      </nav>
 
-
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-            </ul>
-            <a href="https://docs.google.com/document/d/1wuIybu2j02CWnAq5KXcbDSzyRvODzq_v/edit?usp=share_link&ouid=112898639644687269205&rtpof=true&sd=true" class="btn">Resume</a>
-        </nav>
-
-        <div class="content">
-            <span class="title">Freelance Web Developer</span>
-            <h1>Hello, I’m <span>Uma</span></h1>
-            <p>
-                Welcome to my world of creativity and curiosity! Here, I share my journey through technology, art, and everything that inspires me along the way.
-            </p>
-            <a href="https://docs.google.com/document/d/1wuIybu2j02CWnAq5KXcbDSzyRvODzq_v/export?format=pdf" class="btn">Download Resume</a>
-        </div>
+      <div class="content reveal">
+        <span class="title animated">Freelance Web Developer</span>
+        <h1 class="animated">Hello, I’m <span>Uma</span></h1>
+        <p class="animated">
+          Welcome to my world of creativity and curiosity — blending code, design, and innovation to craft seamless digital experiences.
+        </p>
+        <a href="about.html" class="btn animated">Learn More</a>
+      </div>
     </div>
+  </div>
+
+  <script>
+    // Scroll reveal
+    function reveal() {
+      const reveals = document.querySelectorAll(".reveal");
+      for (const el of reveals) {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          el.classList.add("active");
+        } else {
+          el.classList.remove("active");
+        }
+      }
+    }
+    window.addEventListener("scroll", reveal);
+    reveal();
+
+    // Moving background effect
+    document.addEventListener('mousemove', e => {
+      const bg = document.querySelector('.hero');
+      const moveX = (e.clientX / window.innerWidth) * 10;
+      const moveY = (e.clientY / window.innerHeight) * 10;
+      bg.style.backgroundPosition = `${50 - moveX}% ${50 - moveY}%`;
+    });
+  </script>
 </body>
 </html>
