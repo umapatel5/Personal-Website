@@ -279,3 +279,12 @@ blockquote {
   color: #1f1f25;
 }
 
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px auto; /* centers it above the text */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
