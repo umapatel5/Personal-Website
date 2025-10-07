@@ -7,6 +7,7 @@
   <title>Uma Patel | Portfolio</title>
 </head>
 <body>
+  <!-- Entire site fades in -->
   <div class="fade-in">
     <div class="hero">
       <nav>
@@ -18,6 +19,7 @@
         <a href="https://docs.google.com/document/d/1wuIybu2j02CWnAq5KXcbDSzyRvODzq_v/edit" class="btn">Resume</a>
       </nav>
 
+      <!-- Text reveal animation -->
       <div class="content reveal">
         <span class="title animated">Freelance Web Developer</span>
         <h1 class="animated">Hello, I’m <span>Uma</span></h1>
@@ -29,8 +31,9 @@
     </div>
   </div>
 
+  <!-- JavaScript animations -->
   <script>
-    // Scroll reveal
+    // --- Scroll reveal ---
     function reveal() {
       const reveals = document.querySelectorAll(".reveal");
       for (const el of reveals) {
@@ -47,12 +50,14 @@
     window.addEventListener("scroll", reveal);
     reveal();
 
-    // Moving background effect
+    // --- Parallax background movement ---
     document.addEventListener('mousemove', e => {
       const bg = document.querySelector('.hero');
-      const moveX = (e.clientX / window.innerWidth) * 10;
-      const moveY = (e.clientY / window.innerHeight) * 10;
-      bg.style.backgroundPosition = `${50 - moveX}% ${50 - moveY}%`;
+      if (bg) {
+        const moveX = (e.clientX / window.innerWidth) * 10;
+        const moveY = (e.clientY / window.innerHeight) * 10;
+        bg.style.backgroundPosition = `${50 - moveX}% ${50 - moveY}%`;
+      }
     });
   </script>
 </body>
