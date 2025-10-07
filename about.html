@@ -1,54 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>About Me - Uma Patel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>About Me - Uma</title>
 </head>
 <body>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html" class="active">About</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
     </ul>
   </nav>
 
-  <section class="about-section reveal">
-    <div class="about-container">
+  <!-- ABOUT INTRO -->
+  <div class="about reveal">
+    <div class="about-header">
       <div class="about-text">
         <h2>About Me</h2>
         <p>
-          Hi! I’m Uma, a passionate <strong>Freelance Web Developer</strong> with a love for creating engaging, user-friendly websites. 
-          Specializing in <strong>front-end development</strong>, I work with HTML, CSS, and JavaScript to craft seamless digital experiences. 
-          My curiosity for understanding how things work first drew me into tech, and that curiosity continues to drive me to explore 
-          new tools and frameworks across design, development, and data.
+          Hi! I’m Uma, a <strong>Freelance Web Developer</strong> and Computer Science student at NYU. 
+          I love creating digital experiences that are both technically sound and visually elegant. 
+          My curiosity for understanding how things work drives me to explore new technologies and frameworks — 
+          from front-end design to full-stack engineering.
         </p>
         <p>
-          I’m currently a <strong>Computer Science student at NYU</strong>. 
-          Last year, I worked on <em>LangConv</em> — a full-stack web app that simulates language learning through real-time conversations — 
-          which helped me deepen my backend, database, and API integration skills. 
-          More recently, I’ve gained experience across <strong>software development, investments, and project management</strong> 
-          through internships at <em>PGIM</em> and <em>Quantum Pulse Consulting</em>, where I worked on data analytics dashboards, 
-          workflow automation, and cross-functional Agile sprints.
-        </p>
-        <p>
-          When I’m not coding, I’m exploring design trends, sketching creative ideas, or working on projects that blend 
-          <strong>technology, creativity, and real-world problem solving</strong>. 
-          With a growth mindset and a love for learning, I’m always seeking new opportunities to refine my skills 
-          and contribute to meaningful, impactful work.
+          Through projects like <em>LangConv</em> and internships at <em>PGIM</em> and <em>Quantum Pulse Consulting</em>, 
+          I’ve developed hands-on experience in software development, automation, and data visualization. 
+          I enjoy building tools that make complex ideas simple and intuitive.
         </p>
       </div>
 
-      <div class="about-image">
-        <img src="profile.jpg" alt="Uma Patel" class="profile-square" />
-      </div>
+      <img src="img/profile.jpg" alt="Uma Patel" class="profile-pic side"/>
     </div>
+
+    <div class="scroll-hint">↓ Scroll</div>
+  </div>
+
+  <!-- SCROLL SECTION 1 -->
+  <section class="section reveal">
+    <h2>Internship Experience</h2>
+    <p>
+      My internships taught me that software engineering is about <strong>people</strong> as much as it is about code. 
+      At <strong>PGIM</strong>, I built Power Apps dashboards and automated investment workflows — 
+      learning how to translate financial data into real-time tools for decision-making.  
+      At <strong>Quantum Pulse Consulting</strong>, I worked on website modernization projects that helped small businesses 
+      strengthen their digital presence.
+    </p>
   </section>
 
-  <!-- Scroll reveal script -->
+  <!-- SCROLL SECTION 2 -->
+  <section class="section reveal alt">
+    <h2>My Approach</h2>
+    <p>
+      I’m drawn to projects that combine creativity and structure. I believe in building things with purpose — 
+      software that feels human, solves real problems, and leaves room for curiosity.  
+      Whether I’m managing a project or debugging an API call, I focus on learning, empathy, and clean design.
+    </p>
+  </section>
+
+  <!-- SCROLL SECTION 3 -->
+  <section class="section reveal">
+    <h2>What I’m Exploring Next</h2>
+    <p>
+      Lately, I’ve been diving deeper into <strong>AI and conversational interfaces</strong> — 
+      learning how technology can make language learning, accessibility, and creativity more intuitive.  
+      I’m excited by tools that blend communication, code, and design — and how they shape the future of interaction.
+    </p>
+  </section>
+
+  <!-- SCROLL SECTION 4 -->
+  <section class="section reveal alt">
+    <h2>Skills Beyond Code</h2>
+    <ul class="soft-skills">
+      <li>🌱 Curiosity-Driven Learning</li>
+      <li>🤝 Team Collaboration</li>
+      <li>🎨 Design Thinking</li>
+      <li>🧠 Analytical Problem Solving</li>
+      <li>💬 Communication</li>
+    </ul>
+  </section>
+
   <script>
+    // Scroll reveal
     function reveal() {
       const reveals = document.querySelectorAll(".reveal");
       for (const el of reveals) {
@@ -64,6 +100,11 @@
     }
     window.addEventListener("scroll", reveal);
     reveal();
+
+    // Scroll down button
+    document.querySelector(".scroll-hint").addEventListener("click", () => {
+      document.querySelector(".section").scrollIntoView({ behavior: "smooth" });
+    });
   </script>
 </body>
 </html>
