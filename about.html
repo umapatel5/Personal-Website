@@ -9,7 +9,7 @@
 <body>
     <nav>
         <!--
-        <img src="https://drive.google.com/uc?id=1bmqQiELHDLqYEc5Rntb9VUfAi20j1zet" class="logo" alt="My Logo" />
+        <img src="https://drive.google.com/uc?id=1bmqQiELHDlqYEc5Rntb9VUfAi20j1zet" class="logo" alt="My Logo" />
         -->
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -18,18 +18,68 @@
         </ul>
     </nav>
 
-    <div class="about">
-        <h2>About Me</h2>
-        <p>
-            Hi! I’m Uma, a passionate Freelance Web Developer with a love for creating engaging, user-friendly websites. Specializing in front-end development, I work with HTML, CSS, and JavaScript to craft seamless digital experiences. My journey into the tech world began with a fascination for understanding how things work, which has led me to explore various programming languages and frameworks to expand my technical expertise.        </p>
-        <p>
-            I’m currently a student at NYU and an active member of Tech@NYU, where I collaborate with like-minded peers to tackle innovative projects. Last semester, I built a full-stack website called "LangConv", designed to simplify language learning through real-time conversation simulations. This project allowed me to dive deeper into backend development and strengthen my skills in database management and API integration.
+    <!-- ABOUT SECTION -->
+    <div class="reveal">
+      <div class="about">
+          <h2>About Me</h2>
+          <p>
+              Hi! I’m Uma, a passionate <strong>Freelance Web Developer</strong> with a love for creating engaging, user-friendly websites. 
+              Specializing in <strong>front-end development</strong>, I work with HTML, CSS, and JavaScript to craft seamless digital experiences. 
+              My curiosity for understanding how things work first drew me into tech, and that curiosity continues to drive me to explore 
+              new tools and frameworks across design, development, and data.
+          </p>
 
-        </p>
-        <p>
-            When I’m not coding, you can find me exploring new design trends, sketching creative ideas, or working on personal projects that merge technology with creativity. With a growth mindset and a commitment to continuous learning, I’m always seeking opportunities to refine my skills and contribute to impactful projects that make a difference.
+          <p>
+              I’m currently a <strong>Computer Science student at NYU</strong>. 
+              Last year, I worked on <em>LangConv</em> — a full-stack web app that simulates language learning through real-time conversations — 
+              which helped me deepen my backend, database, and API integration skills. 
+              More recently, I’ve gained experience across <strong>software development, investments, and project management</strong> 
+              through internships at <em>PGIM</em> and <em>Quantum Pulse Consulting</em>, where I worked on data analytics dashboards, 
+              workflow automation, and cross-functional Agile sprints.
+          </p>
 
-        </p>
+          <p>
+              When I’m not coding, I’m exploring design trends, sketching creative ideas, or working on projects that blend 
+              <strong>technology, creativity, and real-world problem solving</strong>. 
+              With a growth mindset and a love for learning, I’m always seeking new opportunities to refine my skills 
+              and contribute to meaningful, impactful work.
+          </p>
+      </div>
     </div>
+
+    <!-- DIVIDER + QUOTE -->
+    <hr class="divider">
+    <blockquote>"Building with purpose, designing with empathy, and learning with curiosity."</blockquote>
+
+    <!-- SKILLS SECTION -->
+    <div class="reveal">
+      <section class="skills">
+        <h2>Skills & Tools</h2>
+        <div class="skills-grid">
+          <div><strong>Languages:</strong> Python, Java, JavaScript, HTML, CSS, SQL</div>
+          <div><strong>Frameworks:</strong> React, Node.js, Express, Django</div>
+          <div><strong>Tools:</strong> Git, GitHub, VS Code, Power Platform, Google Cloud, Figma</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- SCROLL REVEAL SCRIPT -->
+    <script>
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 150;
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+      window.addEventListener("scroll", reveal);
+      reveal();
+    </script>
 </body>
 </html>
