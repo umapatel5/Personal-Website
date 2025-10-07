@@ -509,3 +509,95 @@ h1 span {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+/* ---------- HERO GRADIENT ANIMATION ---------- */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(118,188,230,0.25), rgba(253,71,102,0.25), rgba(28,153,254,0.25));
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+  z-index: 0;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- FLOATING ICONS ---------- */
+.floating-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+.float-icon {
+  position: absolute;
+  width: 60px;
+  opacity: 0.15;
+  animation: float 10s ease-in-out infinite;
+}
+.float-icon:nth-child(1) { top: 25%; left: 10%; animation-delay: 0s; }
+.float-icon:nth-child(2) { top: 60%; left: 80%; animation-delay: 3s; }
+.float-icon:nth-child(3) { top: 40%; left: 50%; animation-delay: 6s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+}
+
+/* ---------- CONTACT BUTTON ---------- */
+.contact-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #76BCE6;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  box-shadow: 0 6px 15px rgba(118,188,230,0.4);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+.contact-btn:hover {
+  background: #669EC0;
+  transform: translateY(-3px);
+}
+
+/* ---------- SCROLL HINT ---------- */
+.scroll-hint {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #76BCE6;
+  font-weight: 600;
+  animation: fadeMove 2s ease-in-out infinite;
+}
+@keyframes fadeMove {
+  0%, 100% { opacity: 0; transform: translate(-50%, 0); }
+  50% { opacity: 1; transform: translate(-50%, -10px); }
+}
+
