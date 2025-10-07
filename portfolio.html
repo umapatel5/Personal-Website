@@ -1,64 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Uma Patel</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <!--
-          <img src="https://drive.google.com/uc?id=1bmqQiELHDLqYEc5Rntb9VUfAi20j1zet" class="logo" alt="My Logo" />
-          -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+  </nav>
 
-    <div class="portfolio-content">
-        <h1>My Portfolio</h1>
-        <p>Welcome to my portfolio page! Here are some of my projects:</p>
+  <section class="portfolio-section">
+    <h1>My Projects</h1>
+    <p class="portfolio-intro">
+      Here are some of the projects I’ve worked on — from full-stack web apps to data-driven tools and creative designs.
+    </p>
 
-        <div class="project">
-            <h2>Forest Fire Burn Rate Prediction</h2>
-            <p>This project focuses on predicting the burn rate of forest fires using machine learning techniques. It aims to provide insights that can help in fire management and prevention strategies.</p>
-            <p>Technologies used: Python, Machine Learning, Data Analysis.</p>
-            <p>Check out the project:</p>
-            <ul>
-                
-                <li><a href="https://colab.research.google.com/drive/1G9Ndg3NKdwbiBzPxaq1f0hvNzqLUyiO0#scrollTo=IS9korXkf34I" target="_blank">View Google Colab Notebook</a></li>
-                <li><a href="https://www.figma.com/proto/qt06BZGgVX5glogMPeiHIs/Untitled?node-id=33-685" target="_blank">View Figma Prototype</a></li>
-            </ul>
-        </div>
+    <div class="projects-container">
+      <div class="project-card">
+        <h2>Forest Fire Burn Rate Prediction</h2>
+        <p>
+          A machine learning project that predicts the burn rate of forest fires using environmental data. 
+          Designed to support fire management and prevention strategies.
+        </p>
+        <p><strong>Tech:</strong> Python, Machine Learning, Data Analysis</p>
+        <a href="https://colab.research.google.com/drive/1G9Ndg3NKdwbiBzPxaq1f0hvNzqLUyiO0#scrollTo=IS9korXkf34I" target="_blank" class="project-link">View Google Colab Notebook →</a>
+      </div>
 
+      <div class="project-card">
+        <h2>Steel Hacks 2024</h2>
+        <p>
+          Built during the Steel Hacks 2024 Hackathon at the University of Pittsburgh — a collaborative platform to help students form study groups and share resources.
+        </p>
+        <p><strong>Tech:</strong> HTML, CSS, JavaScript, SQL, Python</p>
+        <a href="https://github.com/ForgotTheFish79/SteelHack2024" target="_blank" class="project-link">View GitHub Repository →</a>
+      </div>
 
-        <div class="project">
-                <h2>Steel Hacks 2024</h2>
-                <p>This project was developed during the Steel Hacks 2024 Hackathon at the University Of Pittsburgh. It focuses on creating a platform that enhances collaborative study experiences among students.</p>
-                <p>Technologies used: HTML, CSS, JavaScript, SQL, Python.</p>
-                <p>Check out the project:</p>
-                <ul>
-                    <li><a href="https://github.com/ForgotTheFish79/SteelHack2024" target="_blank">View GitHub Repository</a></li>
-                </ul>
-            </div>
-
-            <!-- Add more project sections as needed -->
-      
-        <div class="project">
-            <h2>Foreign Language Conversation Stimulator 2024</h2>
-            <p>This project was developed during the my membership in Tech@NYU's TeckTreks Program. It focuses on creating a platform that enhances collaborative study experiences among students.</p>
-            <p>Technologies used: React.js, Express, Figma, etc.</p>
-            <p>Check out the project:</p>
-            <ul>
-                <li><a href="https://docs.google.com/presentation/d/1Odwf1trw60K6KOYak4bu3H5Z2Dqj7i_SdPmVQ-uxeTo/edit?usp=sharing" target="_blank">Project Presentation (View Demo On Slide 6)</a></li>
-            </ul>
-        </div>
-
-   
+      <div class="project-card">
+        <h2>Foreign Language Conversation Simulator</h2>
+        <p>
+          Created through Tech@NYU’s Tech Treks program — a web app that simulates real-time language conversations 
+          using speech-to-text and AI-driven translation APIs.
+        </p>
+        <p><strong>Tech:</strong> React.js, Express, Figma, Google Cloud, OpenAI API</p>
+        <a href="https://docs.google.com/presentation/d/1Odwf1trw60K6KOYak4bu3H5Z2Dqj7i_SdPmVQ-uxeTo/edit?usp=sharing" target="_blank" class="project-link">View Presentation →</a>
+      </div>
     </div>
-
+  </section>
 </body>
 </html>
+
