@@ -601,3 +601,91 @@ h1 span {
   50% { opacity: 1; transform: translate(-50%, -10px); }
 }
 
+
+
+
+
+
+
+
+
+
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.profile-pic.side {
+  width: 280px;
+  height: 280px;
+  border-radius: 25px;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+.profile-pic.side:hover {
+  transform: scale(1.05);
+}
+
+.scroll-hint {
+  text-align: center;
+  color: #76BCE6;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 30px;
+  cursor: pointer;
+  animation: fadeMove 2s ease-in-out infinite;
+}
+
+/* Scroll Sections */
+.section {
+  padding: 100px 15%;
+  background-color: #f9f9f9;
+  color: #1f1f25;
+  text-align: left;
+}
+
+.section.alt {
+  background-color: #DDF0FB;
+}
+
+.section h2 {
+  color: #76BCE6;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 850px;
+}
+
+.soft-skills {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.soft-skills li {
+  background: white;
+  border-radius: 30px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.soft-skills li:hover {
+  transform: translateY(-5px);
+}
