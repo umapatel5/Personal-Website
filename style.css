@@ -82,9 +82,11 @@ cursor: pointer;
 }
 .content {
   position: absolute;
-  top: 35%;
+  top: 25%;   /* raised higher on the page */
   left: 8%;
+  transform: translateY(-10%);
 }
+
 .content .title {
   color: #0a0a0a;
   font-size: 15px;
