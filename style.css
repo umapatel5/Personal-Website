@@ -439,3 +439,73 @@ h1 span {
   }
 }
 
+
+/* ---------- ABOUT PAGE LAYOUT ---------- */
+.about-section {
+  background-color: #f9f9f9;
+  padding: 80px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+  max-width: 1100px;
+}
+
+.about-text {
+  flex: 1 1 60%;
+  color: #1f1f25;
+}
+
+.about-text h2 {
+  font-size: 42px;
+  color: #76BCE6;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-square {
+  width: 320px;
+  height: 320px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+}
+
+.profile-square:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 35px rgba(118,188,230,0.4);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about-text, .about-image {
+    flex: 1 1 100%;
+  }
+  .profile-square {
+    width: 250px;
+    height: 250px;
+  }
+}
+
