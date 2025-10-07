@@ -1,92 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>About Me - Uma</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>About Me - Uma Patel</title>
 </head>
 <body>
-    <nav>
-        <!--
-        <img hi src="https://drive.google.com/uc?id=1bmqQiELHDlqYEc5Rntb9VUfAi20j1zet" class="logo" alt="My Logo" />
-        -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+  </nav>
 
-    <!-- ABOUT SECTION -->
-    <!-- ABOUT SECTION -->
-<div class="reveal">
-  <div class="about">
-      <!-- 👇 Add your picture here -->
-      <img src="profile.jpg" alt="Uma Patel headshot" class="profile-pic">
-
-
-      <h2>About Me</h2>
-      <p>
+  <section class="about-section reveal">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
           Hi! I’m Uma, a passionate <strong>Freelance Web Developer</strong> with a love for creating engaging, user-friendly websites. 
           Specializing in <strong>front-end development</strong>, I work with HTML, CSS, and JavaScript to craft seamless digital experiences. 
           My curiosity for understanding how things work first drew me into tech, and that curiosity continues to drive me to explore 
           new tools and frameworks across design, development, and data.
-      </p>
-      
+        </p>
+        <p>
+          I’m currently a <strong>Computer Science student at NYU</strong>. 
+          Last year, I worked on <em>LangConv</em> — a full-stack web app that simulates language learning through real-time conversations — 
+          which helped me deepen my backend, database, and API integration skills. 
+          More recently, I’ve gained experience across <strong>software development, investments, and project management</strong> 
+          through internships at <em>PGIM</em> and <em>Quantum Pulse Consulting</em>, where I worked on data analytics dashboards, 
+          workflow automation, and cross-functional Agile sprints.
+        </p>
+        <p>
+          When I’m not coding, I’m exploring design trends, sketching creative ideas, or working on projects that blend 
+          <strong>technology, creativity, and real-world problem solving</strong>. 
+          With a growth mindset and a love for learning, I’m always seeking new opportunities to refine my skills 
+          and contribute to meaningful, impactful work.
+        </p>
+      </div>
 
-
-          <p>
-              I’m currently a <strong>Computer Science student at NYU</strong>. 
-              Last year, I worked on <em>LangConv</em> — a full-stack web app that simulates language learning through real-time conversations — 
-              which helped me deepen my backend, database, and API integration skills. 
-              More recently, I’ve gained experience across <strong>software development, investments, and project management</strong> 
-              through internships at <em>PGIM</em> and <em>Quantum Pulse Consulting</em>, where I worked on data analytics dashboards, 
-              workflow automation, and cross-functional Agile sprints.
-          </p>
-
-          <p>
-              When I’m not coding, I’m exploring design trends, sketching creative ideas, or working on projects that blend 
-              <strong>technology, creativity, and real-world problem solving</strong>. 
-              With a growth mindset and a love for learning, I’m always seeking new opportunities to refine my skills 
-              and contribute to meaningful, impactful work.
-          </p>
+      <div class="about-image">
+        <img src="profile.jpg" alt="Uma Patel" class="profile-square" />
       </div>
     </div>
+  </section>
 
-    <!-- DIVIDER + QUOTE -->
-    <hr class="divider">
-    <blockquote>"Building with purpose, designing with empathy, and learning with curiosity."</blockquote>
-
-    <!-- SKILLS SECTION -->
-    <div class="reveal">
-      <section class="skills">
-        <h2>Skills & Tools</h2>
-        <div class="skills-grid">
-          <div><strong>Languages:</strong> Python, Java, JavaScript, HTML, CSS, SQL</div>
-          <div><strong>Frameworks:</strong> React, Node.js, Express, Django</div>
-          <div><strong>Tools:</strong> Git, GitHub, VS Code, Power Platform, Google Cloud, Figma</div>
-        </div>
-      </section>
-    </div>
-
-    <!-- SCROLL REVEAL SCRIPT -->
-    <script>
-      function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
-        for (var i = 0; i < reveals.length; i++) {
-          var windowHeight = window.innerHeight;
-          var elementTop = reveals[i].getBoundingClientRect().top;
-          var elementVisible = 150;
-          if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-          } else {
-            reveals[i].classList.remove("active");
-          }
+  <!-- Scroll reveal script -->
+  <script>
+    function reveal() {
+      const reveals = document.querySelectorAll(".reveal");
+      for (const el of reveals) {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          el.classList.add("active");
+        } else {
+          el.classList.remove("active");
         }
       }
-      window.addEventListener("scroll", reveal);
-      reveal();
-    </script>
+    }
+    window.addEventListener("scroll", reveal);
+    reveal();
+  </script>
 </body>
 </html>
