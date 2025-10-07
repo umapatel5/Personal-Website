@@ -7,24 +7,78 @@
   <title>Uma Patel | Portfolio</title>
 </head>
 <body>
-  <div class="hero">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-      </ul>
-      <a href="https://docs.google.com/document/d/1wuIybu2j02CWnAq5KXcbDSzyRvODzq_v/edit" class="btn">Resume</a>
-    </nav>
+  <div class="fade-in">
+    <div class="hero">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+        <a href="https://docs.google.com/document/d/1wuIybu2j02CWnAq5KXcbDSzyRvODzq_v/edit" class="btn">Resume</a>
+      </nav>
 
-    <div class="content">
-      <span class="title">Freelance Web Developer</span>
-      <h1>Hello, I’m <span>Uma</span></h1>
-      <p>
-        Welcome to my world of creativity and curiosity — blending code, design, and innovation to craft seamless digital experiences.
-      </p>
-      <a href="about.html" class="btn">Learn More</a>
+      <!-- Floating background icons -->
+      <div class="floating-icons">
+        <img src="img/js.png" class="float-icon" />
+        <img src="img/react.png" class="float-icon" />
+        <img src="img/python.png" class="float-icon" />
+      </div>
+
+      <div class="content reveal">
+        <span class="title" id="typing"></span>
+        <h1 class="animated">Hello, I’m <span>Uma</span></h1>
+        <p class="animated">
+          Welcome to my world of creativity and curiosity — blending code, design, and innovation to craft seamless digital experiences.
+        </p>
+        <a href="about.html" class="btn animated">Learn More</a>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="scroll-hint">↓ Scroll</div>
     </div>
   </div>
+
+  <!-- Floating Contact Button -->
+  <a href="mailto:up2040@nyu.edu" class="contact-btn">Contact Me</a>
+
+  <script>
+    // Typing effect
+    const text = "Freelance Web Developer";
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typing").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 80);
+      }
+    }
+    window.onload = typeWriter;
+
+    // Scroll reveal
+    function reveal() {
+      const reveals = document.querySelectorAll(".reveal");
+      for (const el of reveals) {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          el.classList.add("active");
+        } else {
+          el.classList.remove("active");
+        }
+      }
+    }
+    window.addEventListener("scroll", reveal);
+    reveal();
+
+    // Moving background effect
+    document.addEventListener("mousemove", (e) => {
+      const bg = document.querySelector(".hero");
+      const moveX = (e.clientX / window.innerWidth) * 10;
+      const moveY = (e.clientY / window.innerHeight) * 10;
+      bg.style.backgroundPosition = `${50 - moveX}% ${50 - moveY}%`;
+    });
+  </script>
 </body>
 </html>
