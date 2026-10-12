@@ -1,8 +1,6 @@
 # My Portfolio
 
-This is my personal portfolio website, made by Uma Patel and built to share the projects, internships, and technical work I want recruiters and collaborators to see first.
-
-I redesigned this portfolio to better reflect my interests in AI, fintech, product design, and creative software. I wanted it to feel polished but still personal, with project demos, a resume page, and a design style that feels more like me than a standard template.
+This is my personal portfolio website. I built this to share my projects, internships, and technical work I have completed. I designed this portfolio to reflect my interests in fintech, product design AI, and creative software. 
 
 ## Live Site
 
