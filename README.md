@@ -1,6 +1,6 @@
-# Uma Patel Portfolio
+# My Portfolio
 
-Personal portfolio website for Uma Patel, built as a static HTML/CSS site and deployed on Netlify.
+This is my personal portfolio website, built as a static HTML/CSS site and deployed on Netlify. This is made by Uma Patel.
 
 ## Live Site
 
