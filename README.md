@@ -1,6 +1,8 @@
 # My Portfolio
 
-This is my personal portfolio website, built as a static HTML/CSS site and deployed on Netlify. This is made by Uma Patel.
+This is my personal portfolio website, made by Uma Patel and built to share the projects, internships, and technical work I want recruiters and collaborators to see first.
+
+I redesigned this portfolio to better reflect my interests in AI, fintech, product design, and creative software. I wanted it to feel polished but still personal, with project demos, a resume page, and a design style that feels more like me than a standard template.
 
 ## Live Site
 
@@ -8,20 +10,20 @@ This is my personal portfolio website, built as a static HTML/CSS site and deplo
 
 ## What's Included
 
-- Interactive portfolio homepage with selected projects, experience, education, and contact sections
+- A portfolio homepage with my selected projects, experience, education, and contact info
 - Project demos for Umao, LangCon, and News Bias Tracker
-- Embedded resume page with a clean resume preview and PDF link
-- Responsive editorial visual design using custom CSS
+- A resume page with a clean preview and PDF link
+- A responsive visual design built with custom HTML/CSS
 
 ## Featured Projects
 
-- **Umao**: AI technical interview simulator with live coding, Tavus-powered interview interaction, and AI feedback.
-- **LangCon**: Foreign language conversation simulator with voice input, transcription, translation, AI responses, and text-to-speech.
-- **News Bias Tracker**: Media analysis app for comparing coverage and surfacing possible bias through tone, wording, and framing.
+- **Umao**: An AI technical interview simulator with live coding, Tavus-powered interview interaction, and AI feedback.
+- **LangCon**: A foreign language conversation simulator with voice input, transcription, translation, AI responses, and text-to-speech.
+- **News Bias Tracker**: A media analysis app for comparing coverage and surfacing possible bias through tone, wording, and framing.
 
 ## Tech
 
-HTML, CSS, JavaScript-free static pages, Netlify hosting, and media assets for project demos.
+HTML, CSS, static pages, Netlify hosting, and media assets for project demos.
 
 ## Local Preview
 
