@@ -3,75 +3,216 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" />
+  <link rel="stylesheet" href="figma.css?v=umao-video-mp4-1" />
   <title>Uma Patel | Portfolio</title>
 </head>
 <body>
-  <div class="fade-in">
-    <div class="hero">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-        </ul>
-        <a href="https://docs.google.com/document/d/1wuIybu2j02CWnAq5KXcbDSzyRvODzq_v/edit" class="btn">Resume</a>
-      </nav>
+  <main class="site-shell">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="wordmark" href="#home">software engineer<span>.</span></a>
+      <div class="nav-links">
+        <a href="#work">work</a>
+        <a href="#experience">experience</a>
+        <a href="#about">about</a>
+      </div>
+      <a class="nav-hello" href="#contact">
+        connect
+        <svg aria-hidden="true" fill="none" viewBox="0 0 20 20"><path d="M4 10h11M11 6l4 4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </nav>
 
-   
-
-      <div class="content reveal">
-        <span class="title" id="typing"></span>
-        <h1 class="animated">Hello, I’m <span>Uma</span></h1>
-        <p class="animated">
-          Welcome to my world of creativity and curiosity, blending code, design, and innovation to craft seamless digital experiences.
-        </p>
-        <a href="about.html" class="btn animated">Learn More</a>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span>Computer scientist, builder & problem solver</span>
+        </div>
+        <h1 class="hero-title">I build thoughtful software <em>that feels like magic.</em></h1>
+        <p class="hero-text">I’m an NYU computer science student building intelligent, human-centered products across AI, full-stack development, and data.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">
+            explore my projects
+            <svg aria-hidden="true" fill="none" viewBox="0 0 20 20"><path d="M4 10h11M11 6l4 4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="text-link" href="#about">more about me</a>
+        </div>
       </div>
 
-         </div>
-  </div>
+      <div class="hero-art" aria-label="A whimsical illustration of flowers and a creative studio window" role="img">
+        <span class="tape tape-top"></span>
+        <span class="tape tape-bottom"></span>
+        <span class="sun-scribble"></span>
+        <span class="art-spark art-spark-one"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M12 2c.5 6.4 3.6 9.5 10 10-6.4.5-9.5 3.6-10 10-.5-6.4-3.6-9.5-10-10 6.4-.5 9.5-3.6 10-10Z" fill="currentColor"/></svg></span>
+        <span class="art-spark art-spark-two"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M12 2c.5 6.4 3.6 9.5 10 10-6.4.5-9.5 3.6-10 10-.5-6.4-3.6-9.5-10-10 6.4-.5 9.5-3.6 10-10Z" fill="currentColor"/></svg></span>
+        <div class="window">
+          <span class="window-sky"></span>
+          <span class="window-sill"></span>
+          <span class="window-vase"></span>
+          <span class="window-stem stem-one"></span>
+          <span class="window-stem stem-two"></span>
+          <span class="window-stem stem-three"></span>
+          <span class="window-flower flower-one"></span>
+          <span class="window-flower flower-two"></span>
+          <span class="window-flower flower-three"></span>
+        </div>
+        <span class="art-note">building useful<br />things lately</span>
+        <svg class="art-arrow" viewBox="0 0 80 54" fill="none" aria-hidden="true">
+          <path d="M75 7C56 4 33 9 25 24c-6 12 5 21 17 12 7-5 4-15-5-14-14 1-24 13-30 26" stroke="currentColor" stroke-linecap="round"/>
+          <path d="m5 40 2 8 8-2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
 
-  <!-- Floating Contact Button -->
-  <a href="mailto:up2040@nyu.edu" class="contact-btn">Contact Me</a>
+    <div class="scribble-divider" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
 
-  <script>
-    // Typing effect
-    const text = "Freelance Web Developer";
-    let i = 0;
-    function typeWriter() {
-      if (i < text.length) {
-        document.getElementById("typing").textContent += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 80);
-      }
-    }
-    window.onload = typeWriter;
+    <section class="work-section" id="work">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Selected work</p>
+          <h2>Projects built with curiosity and care.</h2>
+        </div>
+        <p class="section-note">AI systems, full-stack products, and tools designed around real people.</p>
+      </div>
 
-    // Scroll reveal
-    function reveal() {
-      const reveals = document.querySelectorAll(".reveal");
-      for (const el of reveals) {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        const elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
-          el.classList.add("active");
-        } else {
-          el.classList.remove("active");
-        }
-      }
-    }
-    window.addEventListener("scroll", reveal);
-    reveal();
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-visual project-media">
+            <video src="umao-demo-video.mp4" controls playsinline preload="metadata"></video>
+          </div>
+          <div class="project-meta">
+            <span>01</span>
+            <div>
+              <p>AI · Full Stack</p>
+              <h3>Umao</h3>
+              <p class="project-description">An AI-powered technical interview platform with realistic conversations, live coding, and personalized feedback.</p>
+              <div class="tech-list"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Python</span><span>OpenAI</span><span>Tavus</span><span>Monaco</span></div>
+              <ul class="feature-list"><li>Adaptive AI interviewer</li><li>Multi-language code execution</li><li>Voice and avatar conversations</li></ul>
+              <div class="project-actions"><a href="https://umao.vercel.app/" target="_blank" rel="noreferrer">Live Website</a><a href="https://github.com/umapatel5/umao" target="_blank" rel="noreferrer">GitHub</a></div>
+            </div>
+            <a class="circle-link" href="https://umao.vercel.app/" target="_blank" rel="noreferrer" aria-label="Open Umao"><svg aria-hidden="true" fill="none" viewBox="0 0 20 20"><path d="M4 10h11M11 6l4 4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
 
-    // Moving background effect
-    document.addEventListener("mousemove", (e) => {
-      const bg = document.querySelector(".hero");
-      const moveX = (e.clientX / window.innerWidth) * 10;
-      const moveY = (e.clientY / window.innerHeight) * 10;
-      bg.style.backgroundPosition = `${50 - moveX}% ${50 - moveY}%`;
-    });
-  </script>
+        <article class="project-card">
+          <div class="project-visual project-media">
+            <video src="langcon-demo.mp4" controls playsinline></video>
+          </div>
+          <div class="project-meta">
+            <span>02</span>
+            <div>
+              <p>AI · Full Stack</p>
+              <h3>LangCon</h3>
+              <p class="project-description">A language conversation simulator for practicing speaking through realistic, role-based scenarios.</p>
+              <div class="tech-list"><span>React</span><span>Node.js</span><span>Express</span><span>OpenAI</span><span>Whisper</span><span>Google Cloud</span></div>
+              <ul class="feature-list"><li>15+ languages</li><li>Real-time AI conversation</li><li>Speech recognition and translation</li></ul>
+              <div class="project-actions"><a href="langcon-demo.mp4" target="_blank" rel="noreferrer">Demo Video</a></div>
+            </div>
+            <a class="circle-link" href="langcon-demo.mp4" target="_blank" rel="noreferrer" aria-label="Open LangCon demo"><svg aria-hidden="true" fill="none" viewBox="0 0 20 20"><path d="M4 10h11M11 6l4 4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-visual project-media">
+            <video src="news-bias-walkthrough.mov" controls muted playsinline poster="news-bias-demo.jpeg"></video>
+          </div>
+          <div class="project-meta">
+            <span>03</span>
+            <div>
+              <p>Full Stack · Data</p>
+              <h3>News Bias Tracker</h3>
+              <p class="project-description">A media analysis platform that surfaces potential bias through language, tone, and narrative patterns.</p>
+              <div class="tech-list"><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Mocha</span><span>Chai</span><span>GitHub Actions</span></div>
+              <ul class="feature-list"><li>Article bias analysis</li><li>Interactive score dashboards</li><li>Automated testing and CI/CD</li></ul>
+              <div class="project-actions"><a href="news-bias-walkthrough.mov" target="_blank" rel="noreferrer">Demo Video</a><a href="https://github.com/umapatel5/news-bias-tracker-case-study" target="_blank" rel="noreferrer">Case Study</a></div>
+            </div>
+            <a class="circle-link" href="https://github.com/umapatel5/news-bias-tracker-case-study" target="_blank" rel="noreferrer" aria-label="Open News Bias case study"><svg aria-hidden="true" fill="none" viewBox="0 0 20 20"><path d="M4 10h11M11 6l4 4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span>04</span>
+            <div>
+              <p>Hackathon · SteelHacks XI</p>
+              <h3>Study Group Finder</h3>
+              <p class="project-description">A hackathon project designed to help students discover and connect with study groups.</p>
+              <div class="tech-list"><span>React</span><span>JavaScript</span><span>HTML/CSS</span></div>
+              <ul class="feature-list"><li>Built in 24 hours</li><li>Team of four</li><li>Student matching concept</li></ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experience">
+      <div class="experience-intro">
+        <p class="section-kicker">Where I’ve grown</p>
+        <h2>Experience shaped by learning and building.</h2>
+        <div class="tiny-note">
+          <svg aria-hidden="true" class="flower-mark" viewBox="0 0 42 42"><path d="M21 18c-6-1-9-5-7-9 2-4 7-2 8 5 1-7 6-9 9-5 3 4-1 8-7 9 6 0 9 5 6 9-3 4-8 1-9-5-1 6-6 9-9 5-3-4 1-8 9-9Z" fill="currentColor"/><circle cx="21" cy="18" r="3" fill="var(--color-cream)"/><path d="M21 22c0 7-1 12-5 17M21 28c5-2 8-1 10 1M20 32c-4-2-7-2-9 0" fill="none" stroke="currentColor" stroke-linecap="round"/></svg>
+          <span>Always learning,<br />always shipping.</span>
+        </div>
+      </div>
+      <div class="experience-list">
+        <article class="experience-row"><p class="experience-years">2026</p><div><h3>Investments & Software Developer Intern</h3><p class="experience-company">PGIM</p></div><p class="experience-detail">Migrated legacy Perl scripts to Python, built accounting workflows, analyzed AutoSys risk, and created an AI prompt-evaluation platform.</p></article>
+        <article class="experience-row"><p class="experience-years">2025</p><div><h3>Investments & Software Developer Intern</h3><p class="experience-company">PGIM</p></div><p class="experience-detail">Built Power Platform workflows, dashboards, and an AI agent for financial document queries and tax-harvesting analysis.</p></article>
+        <article class="experience-row"><p class="experience-years">2025</p><div><h3>General Intern</h3><p class="experience-company">Quantum Pulse Consulting</p></div><p class="experience-detail">Supported consulting work through outreach, research, technical presentations, and cross-functional collaboration.</p></article>
+      </div>
+    </section>
+
+    <section class="credentials-section" id="education">
+      <div class="education-card">
+        <p class="section-kicker">Education</p>
+        <img class="nyu-pennant" src="assets/nyu-pennant.png" alt="NYU pennant sticker" />
+        <h2>New York University</h2>
+        <p>Computer Science</p>
+        <span>Focused on AI, software engineering, product design, and creative applications.</span>
+      </div>
+      <div class="skills-card">
+        <p class="section-kicker">Technical toolkit</p>
+        <h2>Languages, frameworks & tools</h2>
+        <div class="skills-list">
+          <span>Python</span><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>C++</span><span>Go</span><span>Bash/Shell</span>
+          <span>React</span><span>Next.js</span><span>Express.js</span><span>Angular</span><span>GraphQL</span><span>NumPy</span><span>Pandas</span>
+          <span>AWS</span><span>Docker</span><span>CI/CD</span><span>GitHub Actions</span><span>Azure DevOps</span><span>Linux</span>
+          <span>Figma</span><span>Git</span><span>GitHub</span><span>MongoDB</span><span>Jira</span><span>Microsoft Power Platform</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-portrait">
+        <span class="portrait-tape"></span>
+        <img class="portrait-photo" src="assets/profile-photo.jpeg" alt="Uma Patel smiling outdoors among soft greenery" />
+        <span class="portrait-frame"></span>
+        <span class="portrait-flower portrait-flower-one"></span>
+        <span class="portrait-flower portrait-flower-two"></span>
+        <span class="portrait-spark"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M12 2c.5 6.4 3.6 9.5 10 10-6.4.5-9.5 3.6-10 10-.5-6.4-3.6-9.5-10-10 6.4-.5 9.5-3.6 10-10Z" fill="currentColor"/></svg></span>
+      </div>
+      <div class="about-copy">
+        <p class="section-kicker">A little about me</p>
+        <h2>Curious mind, careful code, big ideas.</h2>
+        <p>I’m a Computer Science student at NYU who enjoys turning ambitious ideas into approachable software that is useful, reliable, and thoughtfully made.</p>
+        <p>I’m especially interested in applied AI, full-stack engineering, financial technology, and products that help people learn, communicate, and make better decisions.</p>
+        <a class="text-link" href="resume.html">view resume <svg aria-hidden="true" fill="none" viewBox="0 0 20 20"><path d="M4 10h11M11 6l4 4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="footer-spark"><svg aria-hidden="true" fill="none" viewBox="0 0 24 24"><path d="M12 2c.5 6.4 3.6 9.5 10 10-6.4.5-9.5 3.6-10 10-.5-6.4-3.6-9.5-10-10 6.4-.5 9.5-3.6 10-10Z" fill="currentColor"/></svg></div>
+      <p class="footer-note">from my terminal to yours</p>
+      <p class="section-kicker">Let’s connect</p>
+      <h2>Let’s build something <em>meaningful</em> together.</h2>
+      <p class="contact-placeholder"><a class="contact-email" href="mailto:umapatel5@icloud.com">umapatel5@icloud.com</a></p>
+      <div class="footer-bottom">
+        <div>
+          <a href="https://github.com/umapatel5" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="resume.html">Resume</a>
+        </div>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>

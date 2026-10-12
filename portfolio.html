@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Uma Patel</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=umao-video-mp4-1">
 </head>
 <body>
   <nav class="site-nav">
@@ -21,7 +21,7 @@
 
     <div class="nav-actions">
       <a href="mailto:umapatel5@icloud.com" class="icon-link" aria-label="Email Uma">Mail</a>
-      <a href="https://docs.google.com/document/d/1KUTDRbCd7wBdvKGgTxPlat4yASTCmkUW/edit?usp=sharing&ouid=112898639644687269205&rtpof=true&sd=true" class="btn">Resume</a>
+      <a href="resume.html" class="btn">Resume</a>
     </div>
   </nav>
 
@@ -38,31 +38,58 @@
       </p>
 
       <div class="projects-container">
-        <div class="project-card">
+        <div class="project-card project-card-featured">
           <h2>Umao</h2>
-          <a href="https://umao.vercel.app/" target="_blank" rel="noopener noreferrer"><img src="umao-demo.png" alt="Umao interactive coding demo with editor, interviewer portrait, and test controls" style="width:100%;height:auto;border-radius:6px;margin:12px 0;" loading="lazy"></a>
+          <div class="project-showcase">
+            <video src="umao-demo-video.mp4" controls playsinline preload="metadata"></video>
+          </div>
           <p>
-            AI technical interview simulator with a four-language coding workspace, automated testing, voice interaction, webcam analysis, and AI-generated feedback.
+            Umao is an AI technical interview simulator that helps users practice coding interviews in a more realistic environment. It combines a coding workspace, interview-style prompts, voice interaction, webcam analysis, automated test feedback, and AI-generated performance notes.
           </p>
-          <p><strong>Built with:</strong> Next.js, React, TypeScript, Python, Monaco Editor, and Tavus.</p>
-          <p><a href="https://umao.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo</a> &middot; <a href="https://github.com/umapatel5/umao" target="_blank" rel="noopener noreferrer">Source code</a></p>
-          <p>Includes backend API routes, four-language code execution, interview scoring, and progress tracking. Live Tavus video sessions are currently paused due to provider usage limits; the landing page offers an interactive coding preview.</p>
+          <ul class="project-highlights">
+            <li>Four-language coding workspace with Monaco Editor</li>
+            <li>Automated testing flow for interview-style coding problems</li>
+            <li>AI feedback to help users understand strengths and improvement areas</li>
+            <li>Voice, webcam, and Tavus-based interview features for a more realistic practice experience</li>
+          </ul>
+          <p><strong>Tech stack:</strong> Next.js, React, TypeScript, Python, Monaco Editor, Tavus, and AI APIs.</p>
+          <div class="project-actions">
+            <a href="https://umao.vercel.app/" target="_blank" rel="noopener noreferrer">Live Website</a>
+            <a href="https://github.com/umapatel5/umao" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
         </div>
 
         <div class="project-card">
           <h2>News Bias Tracker</h2>
+          <div class="project-showcase project-video">
+            <video src="news-bias-walkthrough.mov" controls muted playsinline poster="news-bias-demo.jpeg">
+              Your browser does not support the video tag.
+            </video>
+          </div>
           <p>
             Full-stack web app that lets users compare news coverage from multiple sources and analyze potential bias through wording, tone, and narrative framing.
           </p>
           <p><strong>Built with:</strong> React, Node.js, Express, MongoDB, and JavaScript.</p>
+          <div class="project-actions">
+            <a href="news-bias-walkthrough.mov" target="_blank" rel="noopener noreferrer">Demo Video</a>
+            <a href="https://github.com/umapatel5/news-bias-tracker-case-study" target="_blank" rel="noopener noreferrer">Case Study</a>
+          </div>
         </div>
 
         <div class="project-card">
           <h2>LangCon / Foreign Language Conversation Simulator</h2>
+          <div class="project-showcase project-video">
+            <video src="langcon-demo.mp4" controls playsinline>
+              Your browser does not support the video tag.
+            </video>
+          </div>
           <p>
             AI language-practice app with scenario-based conversations, voice input, transcription, translation, AI responses, and text-to-speech.
           </p>
           <p><strong>Built with:</strong> React, Node.js, Express, OpenAI API, Whisper, and Google Cloud Translation.</p>
+          <div class="project-actions">
+            <a href="langcon-demo.mp4" target="_blank" rel="noopener noreferrer">Demo Video</a>
+          </div>
         </div>
 
         <div class="project-card">
@@ -83,38 +110,56 @@
       </div>
     </section>
 
-    <section class="experience-section">
+    <section class="experience-section" id="experience">
       <h2>Experience</h2>
 
       <div class="experience-container">
-        <div class="experience-card">
-          <h3>PGIM | Investments &amp; Software Developer Intern <span>Summer 2026</span></h3>
-          <ul>
-            <li>Migrated 80+ legacy Perl scripts to Python and documented their transition</li>
-            <li>Built a 30+ step accounting workflow that converted CSV data into SQL queries</li>
-            <li>Developed a Python model to analyze risk across 1,000+ AutoSys jobs</li>
-            <li>Built an AI prompt-evaluation platform during an internal hackathon that scored prompts, gave improvement feedback, and tracked AI proficiency</li>
-            <li>Analyzed 100+ Splunk errors and categorized them by priority to support troubleshooting and Jira routing</li>
-          </ul>
-        </div>
+        <details class="experience-card experience-drawer">
+          <summary>
+            <span class="experience-title">PGIM | Investments &amp; Software Developer Intern</span>
+            <span class="experience-date">Summer 2026</span>
+            <span class="drawer-plus" aria-hidden="true"></span>
+          </summary>
+          <div class="drawer-content">
+            <ul>
+              <li>Migrated 80+ legacy Perl scripts to Python and documented their transition</li>
+              <li>Built a 30+ step accounting workflow that converted CSV data into SQL queries</li>
+              <li>Developed a Python model to analyze risk across 1,000+ AutoSys jobs</li>
+              <li>Built an AI prompt-evaluation platform during an internal hackathon that scored prompts, gave improvement feedback, and tracked AI proficiency</li>
+              <li>Analyzed 100+ Splunk errors and categorized them by priority to support troubleshooting and Jira routing</li>
+            </ul>
+          </div>
+        </details>
 
-        <div class="experience-card">
-          <h3>PGIM | Investments &amp; Software Developer Intern <span>Summer 2025</span></h3>
-          <ul>
-            <li>Built Power Platform workflows, applications, and dashboards to automate approval processes used by 50+ employees</li>
-            <li>Developed an AI agent that helped asset managers query financial documents for tax-harvesting analysis</li>
-            <li>Connected dashboards with SQL data to track restrictions and violations and support compliance monitoring</li>
-          </ul>
-        </div>
+        <details class="experience-card experience-drawer">
+          <summary>
+            <span class="experience-title">PGIM | Investments &amp; Software Developer Intern</span>
+            <span class="experience-date">Summer 2025</span>
+            <span class="drawer-plus" aria-hidden="true"></span>
+          </summary>
+          <div class="drawer-content">
+            <ul>
+              <li>Built Power Platform workflows, applications, and dashboards to automate approval processes used by 50+ employees</li>
+              <li>Developed an AI agent that helped asset managers query financial documents for tax-harvesting analysis</li>
+              <li>Connected dashboards with SQL data to track restrictions and violations and support compliance monitoring</li>
+            </ul>
+          </div>
+        </details>
 
-        <div class="experience-card">
-          <h3>Quantum Pulse Consulting | General Intern <span>Spring 2025</span></h3>
-          <ul>
-            <li>Supported consulting projects through client outreach, research, and technical presentations</li>
-            <li>Conducted 30+ outreach calls per day and helped coordinate 2–3 client meetings daily</li>
-            <li>Collaborated with team members across finance and technology</li>
-          </ul>
-        </div>
+        <details class="experience-card experience-drawer">
+          <summary>
+            <span class="experience-title">Quantum Pulse Consulting | General Intern</span>
+            <span class="experience-date">Spring 2025</span>
+            <span class="drawer-plus" aria-hidden="true"></span>
+          </summary>
+          <div class="drawer-content">
+            <ul>
+              <li>Supported consulting projects through client outreach, research, and technical presentations</li>
+              <li>Conducted 30+ outreach calls per day and helped coordinate 2–3 client meetings daily</li>
+              <li>Collaborated with team members across finance and technology</li>
+            </ul>
+          </div>
+        </details>
       </div>
     </section>
   </main>
@@ -125,7 +170,7 @@
       <span>Patel</span>
     </a>
     <p>Designed and built by Uma Patel.</p>
-    <a href="mailto:umapatel5@icloud.com">umapatel5@icloud.com</a>
+    <a class="footer-email" href="mailto:umapatel5@icloud.com">umapatel5@icloud.com</a>
   </footer>
 </body>
 </html>

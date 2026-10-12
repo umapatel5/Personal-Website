@@ -3,113 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>About Me - Uma</title>
+  <link rel="stylesheet" href="style.css?v=whimsical-rose-olive-1">
+  <title>About Me | Uma Patel</title>
 </head>
-<body>
-  <nav>
-    <ul>
+<body class="about-page">
+  <nav class="site-nav">
+    <a href="index.html" class="brand" aria-label="Uma Patel home">
+      Uma
+      <span>Patel</span>
+    </a>
+
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html" class="active">About Me</a></li>
+      <li><a href="portfolio.html">Projects</a></li>
     </ul>
+
+    <div class="nav-actions">
+      <a href="mailto:umapatel5@icloud.com" class="icon-link" aria-label="Email Uma">Mail</a>
+      <a href="resume.html" class="btn">Resume</a>
+    </div>
   </nav>
 
-  <!-- ABOUT INTRO -->
-  <div class="about reveal">
-    <div class="about-header">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-         <p>
-  Hi! I’m Uma, a <strong>Freelance Web Developer</strong> and Computer Science student at NYU. 
-  I love creating digital experiences that are both technically sound and visually elegant. 
-  My curiosity for understanding how things work drives me to explore new technologies and frameworks, 
-  from front-end design to full-stack engineering.
-</p>
+  <main>
+    <section class="about about-resume reveal">
+      <div class="about-intro">
+        <div class="photo-stack">
+          <div class="photo-mat">
+            <img src="profile.jpg" alt="Uma Patel" class="profile-pic side">
+          </div>
+          <div class="profile-tags" aria-label="Uma's focus areas">
+            <span>AI tools</span>
+            <span>Full-stack</span>
+            <span>FinTech</span>
+          </div>
+        </div>
 
-        </p>
-        <p>
-          Through projects like <em>LangConv</em> and internships at <em>PGIM</em> and <em>Quantum Pulse Consulting</em>, 
-          I’ve developed hands-on experience in software development, automation, and data visualization. 
-          I enjoy building tools that make complex ideas simple and intuitive.
-        </p>
+        <div class="about-copy">
+          <h1 class="page-title">about <span>me</span></h1>
+          <p>
+            Hi, I’m Uma, a Computer Science student at NYU and a software developer who loves building digital experiences that feel useful, clear, and thoughtfully designed.
+          </p>
+          <p>
+            I’m drawn to the space where engineering meets product thinking: AI tools, financial technology, automation, full-stack apps, and interfaces that make complex ideas easier to use.
+          </p>
+          <p>
+            Through internships at PGIM and Quantum Pulse Consulting, I’ve worked across software development, data workflows, dashboards, client communication, and AI experimentation.
+          </p>
+
+          <div class="contact-block">
+            <h2>Contact</h2>
+            <div class="contact-list">
+              <a href="mailto:umapatel5@icloud.com">umapatel5@icloud.com</a>
+              <a href="portfolio.html">Projects portfolio</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <img src="profile.jpg" alt="Uma Patel" class="profile-pic side"/>
-    </div>
+      <div class="resume-grid">
+        <section class="resume-column">
+          <h2>Experience</h2>
+          <div class="timeline-item">
+            <span>Summer 2026</span>
+            <h3>PGIM</h3>
+            <p>Investments &amp; Software Developer Intern</p>
+          </div>
+          <div class="timeline-item">
+            <span>Summer 2025</span>
+            <h3>PGIM</h3>
+            <p>Investments &amp; Software Developer Intern</p>
+          </div>
+          <div class="timeline-item">
+            <span>Spring 2025</span>
+            <h3>Quantum Pulse Consulting</h3>
+            <p>General Intern</p>
+          </div>
+        </section>
 
-    <div class="scroll-hint">↓ Scroll</div>
-  </div>
+        <section class="resume-column">
+          <h2>Projects</h2>
+          <div class="timeline-item">
+            <h3>Umao</h3>
+            <p>AI technical interview simulator</p>
+          </div>
+          <div class="timeline-item">
+            <h3>News Bias Tracker</h3>
+            <p>Full-stack media analysis app</p>
+          </div>
+          <div class="timeline-item">
+            <h3>LangCon</h3>
+            <p>AI language-practice simulator</p>
+          </div>
+        </section>
 
-  <!-- SCROLL SECTION 1 -->
-  <section class="section reveal">
-    <h2>Internship Experience</h2>
-    <p>
-      My internships showed me that software engineering goes beyond code and is rooted in collaboration, impact, and communication.  
-  At <strong>PGIM</strong>, I built Power BI dashboards and automated workflows in Power Apps,  
-  helping investment teams make faster, data-driven decisions.  
-  At <strong>Quantum Pulse Consulting</strong>, I focused on client communication and project coordination,  
-  managing Scrum meetings, handling outreach, and supporting digital transformation initiatives for small businesses.
-    </p>
-  </section>
+        <section class="resume-column">
+          <h2>Education</h2>
+          <div class="timeline-item">
+            <h3>New York University</h3>
+            <p>Computer Science</p>
+          </div>
 
-  <!-- SCROLL SECTION 2 -->
-  <section class="section reveal alt">
-    <h2>My Approach</h2>
-   <p>
-  I’m drawn to projects that create real impact by making learning, connection, and creativity more accessible.  
-  Whether it’s building a language simulator to help people practice conversation or designing a platform to support students,  
-  I love using technology to solve problems that matter. I approach every project with curiosity, empathy, and a focus on thoughtful design.
-</p>
+          <h2 class="column-subhead">Focus</h2>
+          <div class="focus-list">
+            <span>AI</span>
+            <span>Automation</span>
+            <span>Web apps</span>
+            <span>Data workflows</span>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
 
-  </section>
-
-  <!-- SCROLL SECTION 3 -->
-  <section class="section reveal">
-    <h2>What I’m Exploring Next</h2>
-    <p>
-  Lately, I’ve been diving deeper into <strong>AI and conversational interfaces</strong>,  
-  learning how technology can make language learning, accessibility, and creativity more intuitive.  
-  I’m excited by tools that blend communication, code, and design, and by how they shape the future of interaction.
-</p>
-
-  </section>
-
-  <!-- SCROLL SECTION 4 -->
-  <section class="section reveal alt">
-    <h2>Skills Beyond Code</h2>
-    <ul class="soft-skills">
-      <li>🌱 Curiosity-Driven Learning</li>
-      <li>🤝 Team Collaboration</li>
-      <li>🎨 Design Thinking</li>
-      <li>🧠 Analytical Problem Solving</li>
-      <li>💬 Communication</li>
-    </ul>
-  </section>
-
-  <script>
-    // Scroll reveal
-    function reveal() {
-      const reveals = document.querySelectorAll(".reveal");
-      for (const el of reveals) {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        const elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
-          el.classList.add("active");
-        } else {
-          el.classList.remove("active");
-        }
-      }
-    }
-    window.addEventListener("scroll", reveal);
-    reveal();
-
-    // Scroll down button
-    document.querySelector(".scroll-hint").addEventListener("click", () => {
-      document.querySelector(".section").scrollIntoView({ behavior: "smooth" });
-    });
-  </script>
+  <footer class="site-footer">
+    <a href="index.html" class="brand" aria-label="Uma Patel home">
+      Uma
+      <span>Patel</span>
+    </a>
+    <p>Designed and built by Uma Patel.</p>
+    <a href="mailto:umapatel5@icloud.com">umapatel5@icloud.com</a>
+  </footer>
 </body>
 </html>
